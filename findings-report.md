@@ -1,10 +1,22 @@
-Findings:
--Domain resolution inconsistent 
--Local override caused incorrect IP resolution
+# Findings Report
 
-Root Cause:
--Hosts file manipulation (simulated DNS spoofing)
+## Summary
 
-Resolution:
--Removed malicious entry
--Verified correct DNS resolution 
+The issue involved incorrect DNS resolution caused by a local system configuration.
+
+## Root Cause
+
+A manual entry in the /etc/hosts file redirected the domain to an incorrect IP address.
+
+## Impact
+
+Users were unable to reach the intended destination due to incorrect routing.
+
+## Resolution
+
+The malicious entry was removed from the hosts file, restoring proper DNS functionality.
+
+## Verification
+
+Post-resolution testing confirmed correct DNS resolution and connectivity.
+
